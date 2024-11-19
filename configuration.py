@@ -21,7 +21,7 @@ BOT_ID = 7404841712
 
 BOT_USERNAME = "soul_musixbot"
 
-MONGO_DB_URI = "mongodb+srv://aizen-music:ITACHIBANKIA@aizenmusic.v8utn.mongodb.net/?retryWrites=true&w=majority"
+MONGO_DB_URI = "mongodb+srv://aizenxmongo:0vmRucmzTP26cKTs@cluster0.nlvql.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 DURATION_LIMIT_MIN = int(get_env_var("DURATION_LIMIT", 500000))
 
