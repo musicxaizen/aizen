@@ -28,7 +28,7 @@ async def awake(_, message: Message):
     if message.from_user.id == OWNER_ID:
         TEXT = "ɪ'ᴍ ᴀʟɪᴠᴇ ᴍʏ ʟᴏʀᴅ <a href='https://envs.sh/5Ci.jpg' target='_blank'>⚡</a> !\n\n"
     else:
-        TEXT = f"ʏᴏᴏ {message.from_user.mention}, <a href='https://envs.sh/S35.jpg' target='_blank'>⚡</a>\n\nɪ'ᴍ {app.mention}\n──────────────────\n"
+        TEXT = f"ʏᴏᴏ {message.from_user.mention}, <a href='https://envs.sh/5Ci.jpg' target='_blank'>⚡</a>\n\nɪ'ᴍ {app.mention}\n──────────────────\n"
     
     TEXT += f"ᴄʀᴇᴀᴛᴏʀ ⌯ {owner.mention}\n"
     TEXT += f"ᴠᴇʀsɪᴏɴ ⌯ 𝟸.𝟷𝟼\n"
