@@ -1,0 +1,62 @@
+# Async Libraries
+aiofiles
+aiohttp
+asyncio
+flask
+# Web Scraping and Parsing
+beautifulsoup4
+
+# DNS Library
+dnspython
+
+# FFmpeg and Future
+ffmpeg-python
+future
+
+# Translation and Git
+gpytranslate
+GitPython
+
+# Hachoir and Heroku
+hachoir
+heroku3
+
+# MongoDB Library
+motor
+
+# Imaging and System Utilities
+pillow
+psutil
+py-tgcalls==0.9.7
+pykeyboard
+pyrogram
+pyrofork
+python-dotenv
+pyyaml
+
+# HTTP Requests
+requests
+
+# Speed Test and Spotify
+speedtest-cli
+spotipy
+
+# Telegram and Cryptography
+telegraph
+tgcrypto
+
+# Text Processing
+unidecode
+
+# Downloading Files
+wget
+
+# YouTube Libraries
+yt-dlp
+youtube-search
+youtube-search-python
+
+# GitHub Links
+git+https://github.com/yt-dlp/yt-dlp@master
+git+https://github.com/alexmercerind/youtube-search-python@main
+git+https://github.com/joetats/youtube_search@master

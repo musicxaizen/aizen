@@ -1,0 +1,47 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Git
+        run: sudo apt-get install -y git
+
+      - name: Install Heroku CLI
+        run: |
+          curl https://cli-assets.heroku.com/install.sh | sh
+          heroku --version
+
+      - name: Setup Git for Heroku Deployment
+        run: |
+          git config --global user.name "devineparadox"
+          git config --global user.email "devineparadoxz@gmail.com"
+        
+      - name: Pull latest changes
+        run: |
+          git pull origin main
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "Automated commit for redeployment" || echo "No changes to commit"
+
+      - name: Push changes to Heroku
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: |
+          git push heroku main
+
+      - name: Restart Heroku app
+        run: |
+          heroku restart --app ${{ secrets.HEROKU_APP_NAME }}
+
+      - name: Verify deployment
+        run: |
+          heroku logs --tail --app ${{ secrets.HEROKU_APP_NAME }}

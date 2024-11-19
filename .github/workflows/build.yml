@@ -1,0 +1,11 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GIT_PYTHON_REFRESH: 'quiet'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run your script
+        run: |
+          # Your commands here

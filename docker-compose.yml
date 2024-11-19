@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  my-app:
+    build: .
+    container_name: Devine
+    restart: "no"
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    command: python3 -m Devine
