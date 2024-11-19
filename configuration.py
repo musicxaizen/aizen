@@ -43,9 +43,9 @@ UPSTREAM_BRANCH = None
 
 GIT_TOKEN = None
 
-SUPPORT_CHANNEL = "https://t.me/devine_network"
+SUPPORT_CHANNEL = "https://t.me/soul_x_network"
 
-SUPPORT_CHAT = "https://t.me/devine_support"
+SUPPORT_CHAT = "https://t.me/soul_x_society"
 
 AUTO_LEAVING_ASSISTANT = bool(get_env_var("AUTO_LEAVING_ASSISTANT", False))
 
