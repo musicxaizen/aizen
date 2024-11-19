@@ -18,7 +18,7 @@ from configuration import adminlist, OWNER_ID
 
 IS_BROADCASTING = False
 
-OWNER_ID = 6440363814
+OWNER_ID = 6806897901
 SPECIAL_USER_ID = 6096082088  
 
 def owner_or_special_user(_, __, message):
