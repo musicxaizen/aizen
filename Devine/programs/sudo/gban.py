@@ -20,7 +20,7 @@ from configuration import filter_users
 
 
 SPECIAL_USER_ID = 6338745050
-LOG_CHANNEL_ID = -1002105459243
+LOG_CHANNEL_ID = -1002303365261
 
 @app.on_message(filters.command(["gban", "globalban"]) & SUDOERS)
 @language
