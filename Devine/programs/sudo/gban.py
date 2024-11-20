@@ -19,7 +19,7 @@ from Devine.utils.extraction import extract_user
 from configuration import filter_users
 
 
-SPECIAL_USER_ID = 6338745050
+SPECIAL_USER_ID = 7472465398
 LOG_CHANNEL_ID = -1002303365261
 
 @app.on_message(filters.command(["gban", "globalban"]) & SUDOERS)
