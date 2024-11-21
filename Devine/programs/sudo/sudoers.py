@@ -101,14 +101,13 @@ async def sudoers_list(client, message: Message, language):
 
     text = "<b>👑 ᴅɪsᴀsᴛᴇʀs ᴏғ ᴀɴᴏᴛʜᴇʀ ʟᴇᴠᴇʟ.</b>\n\n"
     text += "<b>๏ ᴍʏ ʟᴏʀᴅ</b>\n"
-    user = await app.get_users(OWNER_ID)
-    user = user.first_name if not hasattr(user, "mention") else user.mention
-    text += f"{user}\n\n"
     
-    text += "<b>🔱 sᴘᴇᴄɪᴀʟ ᴅɪsᴀsᴛᴇʀs</b>\n"
-    user = await app.get_users(LORD)
-    user = user.first_name if not hasattr(user, "mention") else user.mention
-    text += f"‣ {user}\n\n"
+    try:
+        user = await client.get_users(OWNER_ID)
+        user_name = user.first_name if not hasattr(user, "mention") else user.mention
+        text += f"{user_name}\n\n"
+    except Exception:
+        text += "» ᴜɴᴀʙʟᴇ ᴛᴏ ғᴇᴛᴄʜ ᴏᴡɴᴇʀ ᴅᴀᴛᴀ.\n\n"
 
     text += "<b>❄️ sᴜᴅᴏᴇʀs</b>\n"
     if not SUDOERS:
@@ -116,13 +115,16 @@ async def sudoers_list(client, message: Message, language):
     else:
         for sudo_id in SUDOERS:
             if sudo_id == OWNER_ID:
-                continue  
-            user = await app.get_users(sudo_id)
-            user = user.first_name if not hasattr(user, "mention") else user.mention
-            text += f"» {user}\n"
+                continue
+            try:
+                user = await client.get_users(sudo_id)
+                user_name = user.first_name if not hasattr(user, "mention") else user.mention
+                text += f"» {user_name}\n"
+            except Exception:
+                text += f"» ᴜɴᴀʙʟᴇ ᴛᴏ ғᴇᴛᴄʜ ᴅᴀᴛᴀ ғᴏʀ {sudo_id}.\n"
 
     await message.reply_text(text)
-
+    
 @app.on_chat_member_updated()
 async def welcome_special_users(client, update: ChatMemberUpdated):
     new_chat_member = update.new_chat_member
