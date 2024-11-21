@@ -93,7 +93,7 @@ async def userdel(client, message: Message, language):
         await message.reply_text("ᴛʜᴇ ᴀᴛᴛᴇᴍᴘᴛ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴛʜᴇ sᴜᴅᴏ ᴜsᴇʀ ᴡᴀs ᴜɴsᴜᴄᴄᴇssғᴜʟ. ᴘʟᴇᴀsᴇ ᴀᴛᴛᴇᴍᴘᴛ ᴀɢᴀɪɴ.")
 
 
-@app.on_message(filters.command(["sudolist", "sudoers", "specialusers"]) & ~filter_users)
+@app.on_message(filters.command(["sudolist", "sudoers", "specialusers"]) & ~BANNED_USERS)
 @language
 async def sudoers_list(client, message: Message, language):
     if message.from_user.id != OWNER_ID and message.from_user.id not in SUDOERS:
@@ -101,14 +101,31 @@ async def sudoers_list(client, message: Message, language):
 
     text = "<b>👑 ᴅɪsᴀsᴛᴇʀs ᴏғ ᴀɴᴏᴛʜᴇʀ ʟᴇᴠᴇʟ.</b>\n\n"
     text += "<b>๏ ᴍʏ ʟᴏʀᴅ</b>\n"
-    
-    try:
-        user = await client.get_users(OWNER_ID)
-        user_name = user.first_name if not hasattr(user, "mention") else user.mention
-        text += f"{user_name}\n\n"
-    except Exception:
-        text += "» ᴜɴᴀʙʟᴇ ᴛᴏ ғᴇᴛᴄʜ ᴏᴡɴᴇʀ ᴅᴀᴛᴀ.\n\n"
+    user = await client.get_users(OWNER_ID)
+    user = user.first_name if not hasattr(user, "mention") else user.mention
+    text += f"{user}\n\n"
 
+    # Special Users Section
+    text += "<b>🔱 sᴘᴇᴄɪᴀʟ ᴅɪsᴀsᴛᴇʀs</b>\n"
+    if isinstance(SPECIAL_USER_ID, list):
+        for special_id in SPECIAL_USER_ID:
+            try:
+                user = await client.get_users(special_id)
+                user_name = user.first_name if not hasattr(user, "mention") else user.mention
+                text += f"‣ {user_name}\n"
+            except Exception:
+                text += f"‣ ᴜɴᴀʙʟᴇ ᴛᴏ ғᴇᴛᴄʜ ᴅᴀᴛᴀ ғᴏʀ {special_id}.\n"
+    else:
+        try:
+            user = await client.get_users(SPECIAL_USER_ID)
+            user_name = user.first_name if not hasattr(user, "mention") else user.mention
+            text += f"‣ {user_name}\n"
+        except Exception:
+            text += f"‣ ᴜɴᴀʙʟᴇ ᴛᴏ ғᴇᴛᴄʜ ᴅᴀᴛᴀ ғᴏʀ {SPECIAL_USER_ID}.\n"
+
+    text += "\n"
+
+    # Sudoers Section
     text += "<b>❄️ sᴜᴅᴏᴇʀs</b>\n"
     if not SUDOERS:
         text += "ᴛʜᴇʀᴇ ᴀʀᴇ ɴᴏ sᴜᴅᴏᴇʀs ᴄᴜʀʀᴇɴᴛʟʏ."
