@@ -97,7 +97,7 @@ async def userdel(client, message: Message, language):
 @language
 async def sudoers_list(client, message: Message, language):
     if message.from_user.id != OWNER_ID and message.from_user.id not in SUDOERS:
-        return await message.reply_text("ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀᴄᴄᴇss ᴛᴏ ᴜsᴇ ᴛʜɪs.\nᴠɪsɪᴛ @devine_support")
+        return await message.reply_text("ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀᴄᴄᴇss ᴛᴏ ᴜsᴇ ᴛʜɪs.\nᴠɪsɪᴛ @soul_x_society")
 
     text = "<b>👑 ᴅɪsᴀsᴛᴇʀs ᴏғ ᴀɴᴏᴛʜᴇʀ ʟᴇᴠᴇʟ.</b>\n\n"
     text += "<b>๏ ᴍʏ ʟᴏʀᴅ</b>\n"
