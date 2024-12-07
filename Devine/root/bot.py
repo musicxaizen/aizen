@@ -29,7 +29,7 @@ class Devine(Client):
         try:
             await self.send_message(
                 chat_id=configuration.LOGGER_ID,
-                text=f"<b>{self.mention} ɪs ᴀʟɪᴠᴇ <a href='https://envs.sh/5Ci.jpg' target='_blank'>✨</a></b>\n\n"
+                text=f"<b>{self.mention} ɪs ᴀʟɪᴠᴇ <a href='https://envs.sh/KZQ.jpg' target='_blank'>✨</a></b>\n\n"
                          f"<b>• ʙᴏᴛ ᴠᴇʀsɪᴏɴ :</b> <code>𝟸.𝟷 ʀx</code>\n"
                          f"<b>• ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :</b> <code>𝟹.𝟷𝟶.𝟷𝟷</code>\n"
                          f"<b>• ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :</b> <code>𝟸.𝟶.𝟷𝟶𝟼</code>"
