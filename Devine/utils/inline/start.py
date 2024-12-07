@@ -23,7 +23,7 @@ def private_panel(_):
             ),
         ],
         [
-            InlineKeyboardButton(text="ᴜᴛɪʟɪᴛʏ ᴄᴏᴍᴍᴀɴᴅs", callback_data="settings_back_helper"),
+            InlineKeyboardButton(text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="settings_back_helper"),
         ]
     ]
     return buttons
