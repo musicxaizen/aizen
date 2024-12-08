@@ -10,7 +10,7 @@ heroku()
 
 app = Devine()
 userbot = Userbot()
-LORD = 6440363814
+LORD = 7472465398
 
 from .platforms import *
 
