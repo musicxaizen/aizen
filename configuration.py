@@ -73,18 +73,18 @@ votemode = {}
 autoclean = []
 confirmer = {}
 
-START_IMG_URL = get_env_var("START_IMG_URL", "https://telegra.ph//file/0049278b7c30b40319f7f.jpg")
-PING_IMG_URL = get_env_var("PING_IMG_URL", "https://telegra.ph//file/01beefac0ce981a8bc5c8.jpg")
-PLAYLIST_IMG_URL = "https://telegra.ph//file/591fcfcedd423855767f4.jpg"
-STATS_IMG_URL = "https://telegra.ph//file/86d5e07516147d669f3ba.jpg"
-TELEGRAM_AUDIO_URL = "https://telegra.ph//file/a2168e8f272b5066164da.jpg"
-TELEGRAM_VIDEO_URL = "https://telegra.ph//file/a5d7ceadb32e7d509ce81.jpg"
-STREAM_IMG_URL = "https://telegra.ph//file/4a1671590148cd4cd57b6.jpg"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
-YOUTUBE_IMG_URL = "https://telegra.ph//file/591fcfcedd423855767f4.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph//file/f508e9177873c30885606.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph//file/5711afce367e3c68e97a8.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph//file/aaab0e22901fa86fa537e.jpg"
+START_IMG_URL = get_env_var("START_IMG_URL", "https://envs.sh/KZQ.jpg")
+PING_IMG_URL = get_env_var("PING_IMG_URL", "https://envs.sh/KZQ.jpg")
+PLAYLIST_IMG_URL = "https://envs.sh/KZQ.jpg"
+STATS_IMG_URL = "https://envs.sh/KZQ.jpg"
+TELEGRAM_AUDIO_URL = "https://envs.sh/KZQ.jpg"
+TELEGRAM_VIDEO_URL = "https://envs.sh/KZQ.jpg"
+STREAM_IMG_URL = "https://envs.sh/KZQ.jpg"
+SOUNCLOUD_IMG_URL = "https://envs.sh/KZQ.jpg"
+YOUTUBE_IMG_URL = "https://envs.sh/KZQ.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://envs.sh/KZQ.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://envs.sh/KZQ.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://envs.sh/KZQ.jpg"
 
 def time_to_seconds(time):
     stringt = str(time)
