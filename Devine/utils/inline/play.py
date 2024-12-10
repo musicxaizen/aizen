@@ -78,7 +78,7 @@ def stream_markup_timer(_, chat_id, played, dur):
                 InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data="close"),
             ],
             [   
-                InlinekeyboardButton(text="Oᴜʀ sᴜᴘᴘᴏʀᴛ",url=f"https://t.me/Friend_Chat_International"),
+                InlineKeyboardButton(text="Oᴜʀ sᴜᴘᴘᴏʀᴛ",url=f"https://t.me/Friend_Chat_International"),
             ],
         ]
         return buttons
@@ -101,7 +101,7 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data="close"),
         ],
         [
-            InlinekeyboardButton(text="Oᴜʀ sᴜᴘᴘᴏʀᴛ",url=f"https://t.me/Friend_Chat_International"),
+            InlineKeyboardButton(text="Oᴜʀ sᴜᴘᴘᴏʀᴛ",url=f"https://t.me/Friend_Chat_International"),
         ]
     ]
     return buttons
